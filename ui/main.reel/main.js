@@ -16,7 +16,7 @@ exports.Main = Component.specialize(/** @lends Main# */ {
     },
     observableAction: {
         value: function (event) {
-            alert (event.target.identifier + " Clicked!");
+            this.delayedValue = this.delayedValue;
         }
     }
 });
