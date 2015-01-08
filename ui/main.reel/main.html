@@ -13,13 +13,30 @@
                 "element": {"#": "main"}
             }
         },
+        "buttonActionListener": {
+            "prototype": "montage/core/event/action-event-listener",
+            "properties": {
+                "action": "observableAction",
+                "handler": {"@": "owner"}
+            },
+            "_dev": {
+                "isHidden": true
+            }
+        },
         "observableButton": {
             "prototype": "digit/ui/button.reel",
             "properties": {
                 "element": {"#": "observableButton"},
                 "enabled": true,
                 "label": "Button"
-            }
+            },
+            "listeners": [
+                {
+                    "type": "action",
+                    "useCapture": false,
+                    "listener": {"@": "buttonActionListener"}
+                }
+            ]
         }
     }
     </script>
