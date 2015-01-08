@@ -38,11 +38,18 @@
                 "label": "Save"
             }
         },
-        "text": {
+        "realtimeText": {
             "prototype": "montage/ui/text.reel",
             "properties": {
-                "element": {"#": "text"},
+                "element": {"#": "realtimeText"},
                 "value": "Text"
+            }
+        },
+        "textValueInput": {
+            "prototype": "digit/ui/text-field.reel",
+            "properties": {
+                "element": {"#": "textValueInput"},
+                "placeholderValue": "Text"
             }
         }
     }
@@ -50,7 +57,7 @@
 </head>
 <body>
     <div data-montage-id="main" data-montage-skin="light" class="Main">
-        <p data-montage-id="text"></p>
+        <input data-montage-id="textValueInput" type="text">
         <button data-montage-id="observableButton"></button>
     </div>
 </body>
