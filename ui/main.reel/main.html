@@ -11,7 +11,14 @@
         "owner": {
             "properties": {
                 "element": {"#": "main"}
-            }
+            },
+            "listeners": [
+                {
+                    "type": "action",
+                    "useCapture": false,
+                    "listener": {"@": "buttonActionListener"}
+                }
+            ]
         },
         "buttonActionListener": {
             "prototype": "montage/core/event/action-event-listener",
@@ -28,21 +35,22 @@
             "properties": {
                 "element": {"#": "observableButton"},
                 "enabled": true,
-                "label": "Button"
-            },
-            "listeners": [
-                {
-                    "type": "action",
-                    "useCapture": false,
-                    "listener": {"@": "buttonActionListener"}
-                }
-            ]
+                "label": "Save"
+            }
+        },
+        "text": {
+            "prototype": "montage/ui/text.reel",
+            "properties": {
+                "element": {"#": "text"},
+                "value": "Text"
+            }
         }
     }
     </script>
 </head>
 <body>
     <div data-montage-id="main" data-montage-skin="light" class="Main">
+        <p data-montage-id="text"></p>
         <button data-montage-id="observableButton"></button>
     </div>
 </body>
