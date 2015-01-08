@@ -13,11 +13,12 @@
                 "element": {"#": "main"}
             }
         },
-        "changingText": {
-            "prototype": "montage/ui/text.reel",
+        "observableButton": {
+            "prototype": "digit/ui/button.reel",
             "properties": {
-                "element": {"#": "changingText"},
-                "value": "This is awesome"
+                "element": {"#": "observableButton"},
+                "enabled": true,
+                "label": "Button"
             }
         }
     }
@@ -25,7 +26,7 @@
 </head>
 <body>
     <div data-montage-id="main" data-montage-skin="light" class="Main">
-        <p data-montage-id="changingText"></p>
+        <button data-montage-id="observableButton"></button>
     </div>
 </body>
 </html>
